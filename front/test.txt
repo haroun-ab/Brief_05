@@ -1,0 +1,18 @@
+const Eleve = {
+    nomPrenom : 'jean dupont',
+    trimestre1 : {
+        math : {coefMatiere : 3, notes : { controle1 : {note : 10.5, coef: 3}, interro : {note : 10.5, coef: 0.5} , DM : {note : 9, coef: 2} }},
+        histGeo : {coefMatiere : 3, notes : { test: {note : 13.5, coef: 4}, evalaution : {note : 11.5, coef: 3}, DM : {note : 11, coef: 3} }},
+        anglais : {coefMatiere : 3, notes : { controle1 : {note : 8.5, coef: 3}, oral : {note : 11.5, coef: 2}, DM : {note : 8.5, coef: 1.5} }},
+    },
+    trimestre2 : {
+        math : {coefMatiere : 3, notes : { controle1 : {note : 10.5, coef: 3}, interro : {note : 10.5, coef: 0.5} , DM : {note : 9, coef: 2} }},
+        histGeo : {coefMatiere : 3, notes : { test: {note : 13.5, coef: 4}, evalaution : {note : 11.5, coef: 3}, DM : {note : 11, coef: 3} }},
+        anglais : {coefMatiere : 3, notes : { controle1 : {note : 8.5, coef: 3}, oral : {note : 11.5, coef: 2}, DM : {note : 8.5, coef: 1.5} }},
+    },
+    trimestre3 : {
+        math : {coefMatiere : 3, notes : { controle1 : {note : 10.5, coef: 3}, interro : {note : 10.5, coef: 0.5} , DM : {note : 9, coef: 2} }},
+        histGeo : {coefMatiere : 3, notes : { test: {note : 13.5, coef: 4}, evalaution : {note : 11.5, coef: 3}, DM : {note : 11, coef: 3} }},
+        anglais : {coefMatiere : 3, notes : { controle1 : {note : 8.5, coef: 3}, oral : {note : 11.5, coef: 2}, DM : {note : 8.5, coef: 1.5} }},
+    }
+  }
