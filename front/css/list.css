@@ -1,0 +1,30 @@
+.row{
+    margin: auto;
+    
+}
+.student{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 6px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.backgray{
+    background-color: #ECECEC;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 3%;
+}
+.background{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#title{
+    color: #048B9A;
+}
