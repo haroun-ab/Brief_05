@@ -1,0 +1,27 @@
+:root{
+    --primary: #4BA471;
+    --black : #1c2951;
+    --background : #fffff1;
+}
+
+/*e9fef2*/
+div{
+    width: 100%;
+    height: 20vh;
+}
+
+.primary{
+    background: var(--primary);
+}
+
+.secondary{
+    background: var(--black);
+}
+
+.background{
+    background: var(--background);
+}
+
+.white{
+    background: white;
+}

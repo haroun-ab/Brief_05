@@ -1,0 +1,20 @@
+[{
+    "nomPrenom" : "jean dupont",
+    "pseudo" : "jdupont", 
+    "mdp" : "jdupont",
+    "trimestre1" : {
+        "math" : {"notes" : [10.5, 10.5, 9]},
+        "histGeo" : {"notes" : [10.5, 10.5, 9]},
+        "anglais" : {"notes" : [10.5, 10.5, 9]}
+        },
+    "trimestre2" : {
+        "math" : {"notes" : [10.5, 10.5, 9]},
+        "histGeo" : {"notes" : [10.5, 10.5, 9]},
+        "anglais" : {"notes" : [10.5, 10.5, 9]}
+        },
+    "trimestre3" : {
+        "math" : {"notes" : [10.5, 10.5, 9]},
+        "histGeo" : {"notes" : [10.5, 10.5, 9]},
+        "anglais" : {"notes" : [10.5, 10.5, 9]}
+        }
+}]   
