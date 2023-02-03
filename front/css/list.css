@@ -1,3 +1,6 @@
+body{
+    height: 100%;
+}
 .row{
     margin: auto;
     
@@ -19,12 +22,25 @@
     flex-direction: column;
     width: 80%;
     padding: 3%;
+    position: absolute;
+    top: 15%;
+
 }
 .background{
     display: flex;
     justify-content: center;
+    align-items: center;
     align-self: center;
 }
 #title{
     color: #048B9A;
 }
+@media (max-width: 900px) {
+    #row1,#row2,#row3,#row4,#row5,#row6 {
+        display: flex;
+        flex-direction: column;
+    }
+    .student{
+        width: auto;
+    }
+  }
