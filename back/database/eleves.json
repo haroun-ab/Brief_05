@@ -1,0 +1,31 @@
+[
+    {
+    "nomPrenom" : "jean dupont",
+    "pseudo" : "jdupont", 
+    "mdp" : "jdupont",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciation": "Trés bon travail"
+        },
+    "t2" : {"notation" : {
+        "francais" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciation": "Trés bon travail"
+        },
+    "t3" : {"notation" : {
+        "francais" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [10.5, 10.5, 9], "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciation": "Trés bon travail"
+        }
+    }   
+]

@@ -1,27 +1,548 @@
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||| GENERAL ||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 :root{
-    --primary: #4BA471;
-    --black : #1c2951;
-    --background : #fffff1;
+    --primary: #048B9A;
+    --secondary : #ECECEC;
+    --black : #2d2e33;
 }
 
-/*e9fef2*/
-div{
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    height: max-content;
+    background: url('../assets/background.png');
+    background-size: 900px;
+    background-attachment: fixed;
+    min-width: 370px;
+}
+
+main{
+    max-width: 1450px;
+    min-height: 780px; /* à revoir */
+    margin: auto;
+}
+
+h1{
+    font-size: 35px;
+    color: var(--primary);
+    opacity: 1;
+    width: fit-content;
+    margin: 5px 0;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||| HEADER |||| FOOTER |||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+header {
+    height: fit-content;
     width: 100%;
-    height: 20vh;
+    background:var(--primary);
 }
 
-.primary{
+header a{
+    color: white;
+    transition: 500ms;
+    text-decoration: none;
+}
+
+header nav .fa-solid{
+    padding: 25px;
+    font-size: 25px;
+    transition: 500ms;
+}
+
+header nav .fa-solid:hover{
+    background: white;
+    color: var(--primary) !important;
+}
+
+header nav .fa-arrow-right-from-bracket:hover{
+    background: none;
+    color: darkred !important;
+}
+
+.header-content{
+    max-width: 1450px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .brand {
+    color:white;
+    font-family: 'Abril Fatface';
+    font-size: 35px;
+    padding-left: 10px;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background: var(--black);
+    color:var(--black);
+    height: 130px;
+}
+
+.footer-content{
+    max-width: 1450px;
+    margin: auto;
+}
+
+footer .logo{
+    padding: 30px;
+}
+
+footer span{
+    color: rgb(207, 207, 207);
+}
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||| NAVIGATION PAGE DES NOTES |||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.title{
+    width: fit-content;
+    margin: 30px 5px;
+}
+
+.little-border{
+    margin-left: 10px;
+    width: 50px;
+    height: 4px;
     background: var(--primary);
 }
 
-.secondary{
-    background: var(--black);
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.background{
-    background: var(--background);
+.btn-group nav{
+    background: var(--secondary);
+    width: fit-content;
+    border-radius: 15px;
+    margin: 0 5px;
+    overflow: hidden;
 }
 
-.white{
+.btn-group nav button{
+    background: transparent;
+    border: 0;
+    padding: 7px 35px;
+    margin: 0 0;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.btn-group nav button:hover{
+    background: #e1e1e1;
+}
+
+.btn-group nav button:first-child, .btn-group nav button:nth-child(2){
+    border-right: 1px solid #8f8f8f;
+}
+
+
+
+.btn-group .edit-btn, .btn-group .save-btn{
+    background: var(--primary);
+    font-weight: 500;
+    color: white;
+    border: 0;
+    padding: 10px 3% ;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.btn-group .edit-btn:hover, .btn-group .save-btn:hover{
+    background: #059eaf;
+    transform: scale(1.03);
+}
+
+.btn-group .fa-solid{
+   margin: 0 5px;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||| TABLEAU NOTES ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+table{
+    width: 100%;
+    border-radius: 40px;
+    border-spacing: 20px;
+    padding: 2%;
+    font-size: 18px;
+    font-weight: 400;
+    background: var(--secondary);
+}
+
+.table-container{
+    background: var();
+    height: min-content;
+    width: 100%;
+    overflow: scroll;
+    margin: 35px 0;
+}
+ 
+td{
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+td.matieres{
+    width: 15%;
+}
+
+td.moyennes{
+    width: 7%;
+}
+
+td.notes{
+    width: 30%;
+}
+
+td.appreciations{
+    width: 48%;
+}
+
+thead td, tfoot td{
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+}
+
+thead td{
+    text-align: center;
+}
+
+tbody td{
     background: white;
 }
+
+.bold{
+    font-weight: 700;
+}
+
+.moy{
+    text-align: center;
+    color: var(--primary);
+}
+
+.moygen{
+    text-align: center;
+    color: white;
+}
+
+.little{
+    font-size: 16px;
+}
+
+table .appreciation textarea{
+    resize: none;
+    width: 100%;
+}
+
+table input, table textarea{
+    border: 0;
+    outline: 0;
+    overflow: hidden;
+}
+
+table .note input{
+    width: 15%;
+    text-align: center;
+    margin: 1%;
+}
+
+table.edit input , table.edit textarea{
+    border-bottom:var(--primary) 2px solid ;
+}
+table.edit input:focus, table.edit textarea:focus{
+    background: #ECECEC;
+
+}
+
+.flex-center{
+    display: flex;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| LISTE D'ELEVES ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.list-container{
+    background-color: #ECECEC;
+    border-radius: 40px;
+    padding: 100px 1%;
+    margin: 100px 3%;
+
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.student{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 6px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    transition: 300ms;
+}
+
+.student:hover{
+    transform: scale(1.03);
+    font-weight: 500;
+    box-shadow: 0px 0px 10px #048b9a2a
+}
+
+.list-container .title{
+    margin: 0 auto 30px auto;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||| RESPONSIVE |||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+@media(max-width:768px){
+    /*Général*/
+    header .logo .brand {
+        font-size: 25px;
+    }
+
+    header .logo .brand {
+        font-size: 25px;
+    }
+
+    h1{
+        margin-bottom: 2px ;
+        font-size: 28px;
+    }
+
+    .btn-group {
+        margin: 1.5%;
+    }
+
+    .btn-group nav {
+        margin: 0;
+    }
+
+    .btn-group nav button{
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .text-btn{
+        display: none;
+    }
+
+
+    /*Liste d'élèves*/
+    .list-container{
+        width: 100%;
+        padding: 30px 3%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .student{
+        width: 90% !important;
+    }
+
+    header nav .fa-solid{
+        padding: 20px 10px !important;
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    /*Table*/
+    table{
+        width: 1100px;
+    }
+    
+    /*Liste d'éléves*/
+    .student{
+        width: 40%;
+    }
+
+    .list-container{
+        padding: 50px 3%;
+    }
+
+    header nav .fa-solid{
+        padding: 20px;
+        font-size: 25px;
+    }
+}
+
+/**/
+main.login {
+    height: 70vh; 
+}
+  
+  .login-container {
+    position: relative;
+    width: 50%;
+    max-height: 520px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "Quicksand", sans-serif;
+    margin: auto;
+  }
+
+  .login-container .title{
+    margin: 50px auto;
+  }
+  
+  .icon {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px #a6a6a6;
+    font-size: 2.5em;
+    background-color: #048B9A;
+    color: #f0f6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tab-body {
+    position: relative;
+    height: auto;
+    max-height: 400px;
+    width: 100%;
+    padding: 5%;
+    background-color: white;
+    color: #048B9A;
+    box-shadow: 0px 0px 10px #b5b5b5;
+    border-radius: 30px;
+    font-size: 1rem;
+  }
+
+  .tab-body.active {
+    display: block;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #048B9A;
+    padding: 0 0;
+    width: 90%;
+    margin: 50px auto;
+  }
+  
+  form input {
+    width: 90%;
+    border: none;
+    outline: none;
+    color: #048B9A;
+    font-weight: 550;
+
+  }
+  .input::placeholder {
+    color: #048B9A;
+  }
+  
+  
+  .link {
+    display: inline-block;
+    font-size: 0.8em;
+    width: 100%;
+    text-decoration: none;
+    color: #048B9A;
+    text-align: right;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 25%;
+    min-width: fit-content;
+    height: 45px;
+    border-radius: 50px;
+    box-shadow: 0 16px 22px -17px #048b9a;
+    background: var(--primary);
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 500ms;
+  }
+  
+  .btn:hover {
+      background: var(--secondary);
+      color: #048B9A;
+  }
+  
+  .btn:focus {
+      outline: none;
+  }
+  
+  .tab-footer {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 30px;
+    display: flex;
+  }
+  
+  .tab-link {
+    text-decoration: none;
+    color: #048B9A;
+    margin: 0 3%;
+  }
+  
+  .tab-link.active {
+    font-weight: bold;
+  }
+  
+
+
+  @media (max-width: 1024px) {
+    .login-container{
+        width: 80%;
+        padding: 0;
+        margin: 10px;
+    }
+  }
+  @media (max-width: 760px) {
+    .login-container {
+        min-width: none;
+        width: 100%;
+    }
+    .tab-body {
+      width: 100%;
+      padding: 15% 5%;
+        margin: auto;
+    }
+  }
