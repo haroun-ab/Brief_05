@@ -76,6 +76,11 @@ header nav .fa-arrow-right-from-bracket:hover{
     align-items: center;
 }
 
+.logo {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .logo .brand {
     color:white;
     font-family: 'Abril Fatface';
@@ -215,7 +220,14 @@ td.appreciations{
 }
 
 thead td, tfoot td{
+    
     background: var(--primary);
+    color: white;
+    font-weight: 700;
+}
+
+tfoot td{
+    border: 2px solid var(--primary);
     color: white;
     font-weight: 700;
 }
@@ -234,7 +246,6 @@ tbody td{
 
 .moy{
     text-align: center;
-    color: var(--primary);
 }
 
 .moygen{
@@ -246,29 +257,62 @@ tbody td{
     font-size: 16px;
 }
 
+.note-coef{
+    width: 50%;
+    margin: 1%;
+} 
+
+input.note{
+    font-size: 17px !important;
+    font-weight: 500;
+    overflow: visible;
+}
+
+input.coef{
+    color: grey;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 12px !important;
+}
+
+table textarea{
+    resize: none;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+}
+
 table .appreciation textarea{
     resize: none;
     width: 100%;
+    color: white;
+    font-weight: 400;
+    color: black;
 }
 
 table input, table textarea{
     border: 0;
     outline: 0;
+    background: none;
     overflow: hidden;
 }
 
-table .note input{
-    width: 15%;
+table .notation input{
+    width:  100%;
+    font-size: 13px;
     text-align: center;
-    margin: 1%;
 }
 
-table.edit input , table.edit textarea{
+table.edit input.note , table.edit textarea{
     border-bottom:var(--primary) 2px solid ;
+}
+
+table.edit input.coef{
+    border-bottom: rgb(0, 0, 0) 1px solid ;
 }
 table.edit input:focus, table.edit textarea:focus{
     background: #ECECEC;
-
 }
 
 .flex-center{
@@ -447,22 +491,23 @@ main.login {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #048B9A;
+    border-bottom: 1px solid var(--primary);
     padding: 0 0;
     width: 90%;
     margin: 50px auto;
+    padding: 0 0 10px 0;
   }
   
   form input {
     width: 90%;
     border: none;
     outline: none;
-    color: #048B9A;
+    color: var(--primary);
     font-weight: 550;
-
   }
+
   .input::placeholder {
-    color: #048B9A;
+    color: var(--primary);
   }
   
   
@@ -479,7 +524,7 @@ main.login {
     text-decoration: underline;
   }
   
-  .btn {
+  .login-btn {
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -488,7 +533,7 @@ main.login {
     min-width: fit-content;
     height: 45px;
     border-radius: 50px;
-    box-shadow: 0 16px 22px -17px #048b9a;
+    box-shadow: 0 16px 22px -17px var(--primary);;
     background: var(--primary);
     border: none;
     outline: none;
@@ -498,12 +543,12 @@ main.login {
     transition: 500ms;
   }
   
-  .btn:hover {
-      background: var(--secondary);
-      color: #048B9A;
+  .login-btn:hover {
+      background: #059eaf;
+      color: white;
   }
   
-  .btn:focus {
+  .login-btn:focus {
       outline: none;
   }
   
@@ -518,7 +563,7 @@ main.login {
   
   .tab-link {
     text-decoration: none;
-    color: #048B9A;
+    color: var(--primary);;
     margin: 0 3%;
   }
   
@@ -526,23 +571,22 @@ main.login {
     font-weight: bold;
   }
   
-
-
   @media (max-width: 1024px) {
     .login-container{
         width: 80%;
         padding: 0;
-        margin: 10px;
+        margin: 100px auto 0px auto;
     }
   }
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     .login-container {
         min-width: none;
-        width: 100%;
+        width: 96%;
     }
     .tab-body {
       width: 100%;
-      padding: 15% 5%;
-        margin: auto;
+      padding: 50px 5%;
+        margin: 100px auto 0 auto;
     }
+
   }

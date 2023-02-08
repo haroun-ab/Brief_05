@@ -1,4 +1,14 @@
-// ------Séléction des trimestres------//
+if(!sessionStorage.getItem('session')){
+    location.pathname = '/front/html/login.html'
+}
+  
+if (sessionStorage.getItem('session') && sessionStorage.getItem('session')== 'eleves'){
+    document.querySelector('a#home').remove()
+
+    document.querySelector('.edit-btn').style.cssText = "display: none"
+
+}
+
 const trimestreBtn = document.querySelectorAll(".btn-group nav button")
 const tableContainer = document.querySelector('main .table-container')
 
@@ -13,22 +23,21 @@ window.onload = () => {
               <span class="little">Mme Perrin</span>
           </td>
           <td class="moy bold">11.2</td>
-          <td class="note"><div class="flex-center"><input type="text" value="8"> <input type="text" value="9"> <input type="text" value="12"> <input type="text" value="15.5"> <input type="text" value="7"> <input type="text" value="13.5"></div></td>
-          <td class="appreciation"><textarea oninput="updateTextareaHeight(this)">ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</textarea></td>
+          <td class="notation"><div class="flex-center"><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div></div></td>
+          <td class="appreciation"><textarea oninput="updateTextareaHeight(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</textarea></td>
       </tr>
       <tr>
-          <td>
-              <span class="bold">Français</span><br>
-              <span class="little">Mme Perrin</span>
-          </td>
-          <td class="moy bold">11.2</td>
-          <td class="note"><div class="flex-center"><input type="text" value="8"> <input type="text" value="9"> <input type="text" value="12"> <input type="text" value="15.5"> <input type="text" value="7"> <input type="text" value="13.5"></div></td>
-          <td class="appreciation"><textarea oninput="updateTextareaHeight(this)">ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</textarea></td>
-      </tr>
-      
+      <td>
+          <span class="bold">Français</span><br>
+          <span class="little">Mme Perrin</span>
+      </td>
+      <td class="moy bold">11.2</td>
+      <td class="notation"><div class="flex-center"><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div></div></td>
+      <td class="appreciation"><textarea oninput="updateTextareaHeight(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</textarea></td>
+  </tr>
     </tbody>
   <tfoot>
-      <tr><td>Générale</td><td class="moygen">11.2</td><td colspan="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus molestias impedit exercitationem aliquam eum reiciendis nesciunt molestiae ipsam repellendus?</td></tr>
+      <tr><td>Générale</td><td class="moygen">11.2</td><td colspan="2"><textarea>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus molestias impedit exercitationem aliquam eum reiciendis nesciunt molestiae ipsam repellendus?</textarea></td></tr>
   </tfoot>
   </form>
   </table>`
@@ -55,24 +64,24 @@ for (let i = 0; i<trimestreBtn.length; i++){
     tableContainer.innerHTML = `<table class="t${i+1} show">
     <form><thead><td class="matieres">Matières</td><td class="moyennes">Moy.</td><td class="notes">Notes</td><td class="appreciation">Appréciations</td></thead>
     <tbody>
-        <tr>
-            <td>
-                <span class="bold">Français</span><br>
-                <span class="little">Mme Perrin</span>
-            </td>
-            <td class="moy bold">11.2</td>
-            <td class="note"><div class="flex-center"><input type="text" value="8"> <input type="text" value="9"> <input type="text" value="12"> <input type="text" value="15.5"> <input type="text" value="7"> <input type="text" value="13.5"></div></td>
-            <td class="appeciation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</td>
-        </tr>
-        <tr>
-            <td>
-                <span class="bold">Français</span><br>
-                <span class="little">Mme Perrin</span>
-            </td>
-            <td class="moy bold">11.2</td>
-            <td class="note"><div class="flex-center"><input type="text" value="8"> <input type="text" value="9"> <input type="text" value="12"> <input type="text" value="15.5"> <input type="text" value="7"> <input type="text" value="13.5"></div></td>
-            <td class="appeciation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</td>
-        </tr>
+    <tr>
+          <td>
+              <span class="bold">Français</span><br>
+              <span class="little">Mme Perrin</span>
+          </td>
+          <td class="moy bold">11.2</td>
+          <td class="notation"><div class="flex-center"><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div></div></td>
+          <td class="appreciation"><textarea oninput="updateTextareaHeight(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</textarea></td>
+      </tr>
+      <tr>
+      <td>
+          <span class="bold">Français</span><br>
+          <span class="little">Mme Perrin</span>
+      </td>
+      <td class="moy bold">11.2</td>
+      <td class="notation"><div class="flex-center"><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div><div class="note-coef"><input class="note" type="text" value="8"> <input class="coef" type="text" value="9"></div></div></td>
+      <td class="appreciation"><textarea oninput="updateTextareaHeight(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, recusandae.</textarea></td>
+  </tr>
     </tbody>
     <tfoot>
         <tr><td>Générale</td><td class="moygen">11.2</td><td colspan="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus molestias impedit exercitationem aliquam eum reiciendis nesciunt molestiae ipsam repellendus?</td></tr>
@@ -91,8 +100,6 @@ const h1 = document.querySelector('h1')
 const switchBtn = document.querySelector('.btn-group > button')
 
 switchMode(table, allInputs, allTextArea, h1, switchBtn)
-
-
   }
 };
 
@@ -172,3 +179,9 @@ switchMode(table, allInputs, allTextArea, h1, switchBtn)
         }
     }
  }
+
+ // Déconnexion
+document.querySelector('a#logout').onclick = () => {
+    sessionStorage.removeItem('session')
+  }
+  

@@ -1,0 +1,304 @@
+[
+    {
+    "nomPrenom" : "DUPONT Jean",
+    "pseudo" : "jdupont", 
+    "mdp" : "jdupont",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[10.5, 3], [10.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[10.5, 1], [10.5, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[8.5, 1], [13.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[10.5, 1], [10.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[8, 1], [12.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Trés bon travail"
+        },
+
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[10.5, 3], [12, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[8, 1], [11, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[10.5, 1], [12, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[10.5, 1], [11, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[10.5, 1], [9, 2]], "coef": 3, "appreciation" : "Travail insuffisant, doit fournir plus d'efforts !"}
+        }, "appreciationGenerale": "Travail moyen !"
+        },
+
+    "t3" :  {"notation" : {
+            "francais" : {"notes" : [[10.5, 3], [9, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "math" : {"notes" : [[10, 1], [10, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "histGeo" : {"notes" : [[15, 1], [11, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "anglais" : {"notes" : [[10.5, 1], [11, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "eps" : {"notes" : [[12, 1], [10.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+            }, "appreciationGenerale": "Travail assez moyen"
+            }
+    },
+
+
+    {
+    "nomPrenom" : "BENZEMA Karim",
+    "pseudo" : "kbenzema", 
+    "mdp" : "kbenzema",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[15, 3], [16, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[15, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[13, 1], [15, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[17, 1], [16, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Excellent trimestre dans son ensemble"
+        },
+
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[15, 3], [13, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12.5, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[11, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[10, 1], [10.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[12, 1], [13, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Bravo, très bon travail !"
+        },
+
+    "t3" :  {"notation" : {
+        "francais" : {"notes" : [[11, 3], [12, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[14, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[15, 1], [11, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[1, 1], [10.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[18, 1], [18.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Excellent travail, je vous félicite"
+        }
+    }, 
+
+    { 
+    "nomPrenom" : "ASENSIO Marco",
+    "pseudo" : "masensio", 
+    "mdp" : "masensio",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[12, 3], [13, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[10.5, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[11, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[17, 1], [12, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[15, 1], [17, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail "
+        },
+        
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[15, 3], [13, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[11, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[11, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[17, 1], [12, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[12, 1], [13, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Bon travail "
+        },     
+
+    "t3" :  {"notation" : {
+        "francais" : {"notes" : [[15, 3], [11, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[14, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[11, 1], [15, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[10, 1], [15, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[18, 1], [18, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Bon travail "
+        }
+    },
+
+    {   
+    "nomPrenom" : "SILVA Rodrygo",
+    "pseudo" : "rsilva", 
+    "mdp" : "rsilva",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[11, 3], [12, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[15, 1], [13, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[17, 1], [12, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[15, 1], [16, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[13, 3], [12, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12.5, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[14.5, 1], [12, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[11, 1], [11.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[13, 1], [12.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Bravo, très bon travail !"
+        },
+        "t3" :  {"notation" : {
+            "francais" : {"notes" : [[12, 3], [10.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "math" : {"notes" : [[12, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "histGeo" : {"notes" : [[11, 1], [12, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "anglais" : {"notes" : [[10, 1], [11.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "eps" : {"notes" : [[18.5, 1], [18, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+            }, "appreciationGenerale": "Excellent bon travail"
+            }
+    },   
+    {   
+    "nomPrenom" : "VALVERDE Federico",
+    "pseudo" : "fvalverde", 
+    "mdp" : "fvalverde",
+
+        
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[11, 3], [14, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[11, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[11, 1], [15, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[16, 1], [15, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[15, 1], [16, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[12.5, 3], [13, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[10, 1], [12, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[13.5, 1], [12.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[11.5, 1], [10, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[13.5, 1], [12.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+
+    "t3" : {"notation" : {
+        "francais" : {"notes" : [[10.5, 3], [12, 1]], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12, 1], [13, 2]], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[10.5, 1], [10.5, 2]], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[10.5, 1], [11.5, 2]], "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[18, 1],[18, 2]], "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        }
+    },
+    {   
+    "nomPrenom" : "HAZARD Eden",
+    "pseudo" : "ehasard", 
+    "mdp" : "ehasard",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[13, 3], [14, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[11, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[15, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[16, 1], [17, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[15, 1], [17, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Bon travail"
+        },
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[12, 3], [11, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[11.5, 1], [15, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},            "histGeo" : {"notes" : [[15, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[14.5, 1], [19, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[8, 1], [13, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Bravo, très bon travail !"
+        },
+    "t3" :  {"notation" : {
+        "francais" : {"notes" : [[10, 3], [13.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12, 1], [9, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},            "histGeo" : {"notes" : [[15, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[11, 1], [10.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[14, 1], [8, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Travail moyen"
+        }
+    },   
+    {   
+    "nomPrenom" : "CEBALLOS Dani",
+    "pseudo" : "dceballos", 
+    "mdp" : "dceballos",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[12, 3], [11.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12.5, 1], [13.5, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[13.5, 1], [16.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[16, 1], [17.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[16.5, 1], [17, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[12, 3], [14, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[14, 1], [15, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[12.5, 1], [16.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[18, 1], [19, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[17.5, 1], [15, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+    "t3" :  {"notation" : {
+        "francais" : {"notes" : [[14, 3], [15, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[13.5, 1], [15, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[12.5, 1], [13.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[17, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[18, 1], [15, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Excellent travail"
+        }
+    },
+    {   
+    "nomPrenom" : "MODRIC luka",
+    "pseudo" : "lmodric", 
+    "mdp" : "lmodric",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[11, 3], [11.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[12.5, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[8, 1], [16.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[16, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[16.5, 1], [15, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[15.5, 3], [12, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[11.5, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[13.5, 1], [12.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[11, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[12.5, 1], [13.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+    "t3" :  {"notation" : {
+        "francais" : {"notes" : [[11.5, 3], [13.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[14.5, 1], [12, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[13.5, 1], [14.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[15, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[16.5, 1], [18.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        }
+    },
+    {   
+    "nomPrenom" : "KROOS Toni",
+    "pseudo" : "tkroos", 
+    "mdp" : "tkroos",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[14, 3], [12, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[13.5, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[14, 1], [12, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[16, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[15.5, 1], [14, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Très bon travail"
+        },
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[15, 3], [13, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[11.5, 1], [11, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[14, 1], [12, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[12, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[13, 1], [15, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "bon travail"
+        },
+    "t3" :  {"notation" : {
+        "francais" : {"notes" : [[15, 3], [14.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[16, 1], [15, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[17, 1], [15, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[18, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[15, 1], [17, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Excellent travail, bravo !"
+        }
+    },   
+    {   
+    "nomPrenom" : "MILITAO Eder",
+    "pseudo" : "emilitao", 
+    "mdp" : "emilitao",
+    "t1" :  {"notation" : {
+        "francais" : {"notes" : [[10, 3], [8, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[11.5, 1], [10, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[8, 1], [5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[10, 1], [12, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[12, 1], [11, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Travail moyen"
+        },
+    "t2" :  {"notation" : {
+        "francais" : {"notes" : [[9, 3], [5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[6, 1], [10, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[5, 1], [18, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[7, 1], [14, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[10, 1], [11, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Travail moyen"
+        },
+    "t3" :  {"notation" : {
+        "francais" : {"notes" : [[18, 3], [14, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[19, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "histGeo" : {"notes" : [[16, 1], [17, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[18, 1], [15, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "eps" : {"notes" : [[15.5, 1], [16.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
+        }, "appreciationGenerale": "Excellant travail, je te félicite !"
+        }
+    }
+]
