@@ -16,6 +16,16 @@ xhr.onreadystatechange = function() {
     const studentArray = JSON.parse(data)
     const listContainer = document.querySelector('.list') 
     for(let i = 0; i < studentArray.length; i++){
+      
+      
+
+
+
+
+
+    
+      
+      
       listContainer.innerHTML += `
       <a href="/front/html/notes.html?id=${studentArray[1].pseudo}" class="student">${studentArray[i].nomPrenom} <div class="moyenne" id="average1">12.6</div></a>`
     }

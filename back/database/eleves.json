@@ -4,10 +4,10 @@
     "pseudo" : "jdupont", 
     "mdp" : "jdupont",
     "t1" :  {"notation" : {
-        "francais" : {"notes" : [[10.5, 3], [10.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "francais" : {"notes" : [[11, 3], [10, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
         "math" : {"notes" : [[10.5, 1], [10.5, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
         "histGeo" : {"notes" : [[8.5, 1], [13.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
-        "anglais" : {"notes" : [[10.5, 1], [10.5, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[10.5, 1], [12, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
         "eps" : {"notes" : [[8, 1], [12.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
         }, "appreciationGenerale": "Trés bon travail"
         },

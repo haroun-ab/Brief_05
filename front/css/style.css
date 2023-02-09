@@ -10,6 +10,31 @@
     --black : #2d2e33;
 }
 
+.btn{
+    color: #048B9A;
+    background-color: #048B9A;
+}
+.modal-footer .btn{
+    background-color: #048B9A;
+    color:  #ECECEC;
+}
+
+.modal-body{
+        border: 1px solid  #048B9A;
+}
+.modal-title{
+    background-color: #048B9A;
+    color:  #ECECEC;
+    font-weight: 2px;
+    margin: 5px;
+}
+#exampleModalLabel{
+    background-color: #048B9A;
+    width: 10px;
+    height: 10px;
+    
+
+}
 *{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
