@@ -31,10 +31,11 @@ main{
 
 h1{
     font-size: 35px;
-    color: var(--primary);
+    color: var(--primary) !important;
     opacity: 1;
     width: fit-content;
     margin: 5px 0;
+    font-weight: 700 !important;
 }
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -77,8 +78,7 @@ header nav .fa-arrow-right-from-bracket:hover{
 }
 
 .logo {
-    padding-top: 15px;
-    padding-bottom: 15px;
+
 }
 
 .logo .brand {
@@ -503,13 +503,12 @@ main.login {
     align-items: center;
     border-bottom: 1px solid var(--primary);
     padding: 0 0;
-    width: 90%;
     margin: 50px auto;
     padding: 0 0 10px 0;
   }
   
   form input {
-    width: 90%;
+    width: 88% !important;
     border: none;
     outline: none;
     color: var(--primary);
@@ -520,7 +519,12 @@ main.login {
     color: var(--primary);
   }
   
-  
+  nav .btn-modal{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+
   .link {
     display: inline-block;
     font-size: 0.8em;
@@ -534,12 +538,24 @@ main.login {
     text-decoration: underline;
   }
   
+  form .row i{
+    width: 10% !important;
+    padding: 0 !important;
+  }
+  
+  form .row{
+    display: flex !important;
+    align-items: center !important;
+    width: 90%;
+    margin: 40px auto 30px auto ;
+  }
+
   .login-btn {
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 50%);
-    width: 25%;
+    width: 35% !important;
     min-width: fit-content;
     height: 45px;
     border-radius: 50px;
