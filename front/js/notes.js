@@ -141,21 +141,10 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
                 element.removeAttribute('disabled')
             });    
 
-            fillReport(id)
+            
         }
     }
  }
-
-
-
- // Déconnexion
- document.querySelector('a#logout').onclick = () => {
-    sessionStorage.removeItem('session')
-  }
-
-
-
-
 
   function fillReport(id) {
     console.log(id)
@@ -164,7 +153,6 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
         if(studentArray[i].pseudo == paramsId){
             document.querySelector('.nom-eleve').innerHTML = studentArray[i].nomPrenom
             
-
             const tableContainer = document.querySelector('main .table-container')
 
             tableContainer.innerHTML = `<table class="show" >
@@ -223,31 +211,49 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
            </table>`;
      
            const trTab = document.querySelectorAll('tbody tr')
-         
+           let moyGen = 0
+           let totalCoef = 0
+           // Pour les stats 
+           const moyTabStats = []
+           const matiereTab = []
            for(let j = 0; j<trTab.length; j++){
-              //appreciation   
+            let moy = 0
+            let coef = 0
+            
+              // appreciation   
                 document.querySelector(`#${trTab[j].id} .appreciation textarea`).innerHTML = studentArray[i][id].notation[trTab[j].id].appreciation
                 const notesTab = studentArray[i][id].notation[trTab[j].id].notes
                 for(let x = 0; x<notesTab.length; x++){
                     document.querySelector(`#${trTab[j].id} .notation`).innerHTML += `<div class="note-coef"><input class="note" type="text" value="${notesTab[x][0]}"> <input class="coef" type="text" value="${notesTab[x][1]}"></div>`
-
+                    // moyenne d'une matière
+                    moy += notesTab[x][0] * notesTab[x][1] 
+                    // total des coef
+                    coef += notesTab[x][1]  
                 }
-                console.log(studentArray[i][id].notation);
-
+                const moyenneMatiere = (moy/coef).toFixed(2)
+                document.querySelector(`#${trTab[j].id} .moy.bold`).innerHTML = moyenneMatiere
+                totalCoef += coef
+                moyGen += moy
+                moyTabStats.push(moyenneMatiere)
+                matiereTab.push(trTab[j].id)
            }
-        //    document.querySelector('.anglais .appreciation textarea').innerHTML = ""
-        
+           document.querySelector(`.moygen`).innerHTML = (moyGen/totalCoef).toFixed(2)
+           console.log(matiereTab); 
+           console.log(moyTabStats); 
+            /*
+            FRANCOIS 
+            */
         }
+        
     }
-
-   
-
-
+  }  
+}
 }
 
-   
-  
-  }
-}
 
  
+
+ // Déconnexion
+ document.querySelector('a#logout').onclick = () => {
+    sessionStorage.removeItem('session')
+  }

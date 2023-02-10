@@ -77,10 +77,6 @@ header nav .fa-arrow-right-from-bracket:hover{
     align-items: center;
 }
 
-.logo {
-
-}
-
 .logo .brand {
     color:white;
     font-family: 'Abril Fatface';
@@ -92,7 +88,7 @@ footer{
     width: 100%;
     text-align: center;
     background: var(--black);
-    color:var(--black);
+    color: var(--black);
     height: 130px;
 }
 
