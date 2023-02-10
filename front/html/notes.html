@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <title>Notes</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+
+            <a class="logo" href="#">
+                <span class="brand">Scholar</span>
+            </a>
+            <nav>
+                <a id='home' href="./liste.html" title="Accueil"><i class="fa-solid fa-house"></i></a>
+                <a id='logout' href="./login.html" title="Déconnexion"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </nav>     
+        </div>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Notes de <span class="nom-eleve"></span></h1>
+            <div class="little-border"></div>
+        </div>
+        <div class="btn-group"><nav><button href="#" id="t1">Trimestre 1</button><button href="#" id="t2">Trimestre 2</button><button href="#" id="t3">Trimestre 3</button></nav><button class="edit-btn"><i class="fa-solid fa-pencil"></i><span class="text-btn">Modifier</span></button></div>
+        <div class="table-container">
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <span class="brand">Scholar</span>
+            </div>
+            <span>Copyright © Scholar 2020-2023</span>
+        </div>
+    </footer>
+</body>
+
+<script src="../js/notes.js"></script>
+<script type="text/javascript">
+
+        // adapter la taille des text area
+        window.onload = function() {
+            updateTextareaHeight(document.querySelector('table textarea'));
+        }
+        
+        function updateTextareaHeight(input) {
+            input.style.cssText = 'height :auto; min-height: auto; max-height:auto';
+            input.style.cssText = `height :${input.scrollHeight}px; min-height: ${input.scrollHeight}px; max-height:${input.scrollHeight}px`;
+        }
+        
+        function MaxLengthTextarea(objettextarea,maxlength){
+          if (objettextarea.value.length > maxlength) {
+            objettextarea.value = objettextarea.value.substring(0, maxlength);
+            alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
+           }
+        }
+
+</script>
+</html>
