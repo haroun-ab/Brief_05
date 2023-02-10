@@ -14,17 +14,17 @@ form.onsubmit = (e) => {
         pseudo: document.querySelector('#id').value,
         mdp: document.querySelector('#pw').value
     }
-    // Création et configuration d'un objet XML
+    // Création et configuration d'un objet de requête AJAX
 const xhr = new XMLHttpRequest();
 xhr.open("POST", "http://127.0.0.1:8000/login.php", true);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 xhr.setRequestHeader("Access-Control-Allow-Methods", "*");
 
- // Code à exécuter une fois le fichier XML est chargé*
+ // Code à exécuter une fois le fichier JSON est chargé*
 xhr.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    // Récupération de la réponse contenant les données XML
+    // Récupération de la réponse contenant les données JSON
     const data = this.response;
     
     
@@ -37,6 +37,7 @@ if(data === "student successful log in"){
   location = `./notes.html?id=${dataObj.pseudo}`
   sessionStorage.setItem('session', 'eleves');
 }
+
 
 console.log(sessionStorage.getItem('session'))
 

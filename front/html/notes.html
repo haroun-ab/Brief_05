@@ -19,14 +19,14 @@
                 <span class="brand">Scholar</span>
             </a>
             <nav>
-                <a id='home' href="./liste.html"><i class="fa-solid fa-house"></i></a>
-                <a id='logout' href="./login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                <a id='home' href="./liste.html" title="Accueil"><i class="fa-solid fa-house"></i></a>
+                <a id='logout' href="./login.html" title="Déconnexion"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
             </nav>     
         </div>
     </header>
     <main>
         <div class="title">
-            <h1>Notes de <span class="nom-eleve">DUPONT Jean</span></h1>
+            <h1>Notes de <span class="nom-eleve"></span></h1>
             <div class="little-border"></div>
         </div>
         <div class="btn-group"><nav><button href="#" id="t1">Trimestre 1</button><button href="#" id="t2">Trimestre 2</button><button href="#" id="t3">Trimestre 3</button></nav><button class="edit-btn"><i class="fa-solid fa-pencil"></i><span class="text-btn">Modifier</span></button></div>
@@ -44,26 +44,26 @@
         </div>
     </footer>
 </body>
+
+<script src="../js/notes.js"></script>
 <script type="text/javascript">
 
-    // adapter la taille des text area
-    window.onload = function() {
-    updateTextareaHeight(document.querySelector('table textarea'));
-}
-
-function updateTextareaHeight(input) {
-    input.style.cssText = 'height :auto; min-height: auto; max-height:auto';
-    input.style.cssText = `height :${input.scrollHeight}px; min-height: ${input.scrollHeight}px; max-height:${input.scrollHeight}px`;
-}
-
-function MaxLengthTextarea(objettextarea,maxlength){
-  if (objettextarea.value.length > maxlength) {
-    objettextarea.value = objettextarea.value.substring(0, maxlength);
-    alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
-   }
-}
+        // adapter la taille des text area
+        window.onload = function() {
+            updateTextareaHeight(document.querySelector('table textarea'));
+        }
+        
+        function updateTextareaHeight(input) {
+            input.style.cssText = 'height :auto; min-height: auto; max-height:auto';
+            input.style.cssText = `height :${input.scrollHeight}px; min-height: ${input.scrollHeight}px; max-height:${input.scrollHeight}px`;
+        }
+        
+        function MaxLengthTextarea(objettextarea,maxlength){
+          if (objettextarea.value.length > maxlength) {
+            objettextarea.value = objettextarea.value.substring(0, maxlength);
+            alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
+           }
+        }
 
 </script>
-<script src="../js/notes.js"></script>
-<script src="../js/index.js"></script>
 </html>
