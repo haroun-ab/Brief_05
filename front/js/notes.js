@@ -241,9 +241,30 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
            document.querySelector(`.moygen`).innerHTML = (moyGen/totalCoef).toFixed(2)
            console.log(matiereTab); 
            console.log(moyTabStats); 
-            /*
-            FRANCOIS 
-            */ 
+
+            /* Statistiques*/ 
+            
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['francais', 'math', 'histGeo', 'anglais', 'eps'],
+                datasets: [{
+                  label: 'Moyenne',
+                  data: [moyTabStats[0],moyTabStats[1],moyTabStats[2],moyTabStats[3], moyTabStats[4]],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    min: 0,
+                    max: 20
+                  }
+                }
+              }
+            });
         }
         
     }
