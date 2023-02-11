@@ -1,3 +1,4 @@
+console.log('hello');
 if(!sessionStorage.getItem('session')){
     location.pathname = '/front/html/login.html'
 }
@@ -242,7 +243,7 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
            console.log(moyTabStats); 
             /*
             FRANCOIS 
-            */
+            */ 
         }
         
     }
