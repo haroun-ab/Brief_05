@@ -1,4 +1,3 @@
-console.log('hello');
 if(!sessionStorage.getItem('session')){
     location.pathname = '/front/html/login.html'
 }
@@ -56,7 +55,8 @@ for (let i = 0; i<trimestreBtn.length; i++){
     tableContainer.id = `t${i+1}`
     trimestreBtn[i].style.cssText = "color: var(--primary); font-weight: 600";
     fillReport(tableContainer.id)
-   
+    const ctx = document.querySelector('#myChart');
+    ctx.remove()
      //----Entrer et sortir du mode modification-----//
 
           
@@ -142,6 +142,10 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
             trimestreBtn.forEach(element => {
                 element.removeAttribute('disabled')
             });  
+
+         
+
+
             const trTab = document.querySelectorAll('tbody tr')
             for(let i = 0; i < studentArray.length; i++){
                 if(studentArray[i].pseudo == paramsId){
@@ -302,31 +306,10 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
 
            console.log(matiereTab); 
            console.log(moyTabStats); 
-
+           chart(moyTabStats)
+           
             /* Statistiques*/ 
-            
-            const ctx = document.getElementById('myChart');
-
-            new Chart(ctx, {
-              type: 'line',
-              data: {
-                labels: ['francais', 'math', 'histGeo', 'anglais', 'eps'],
-                datasets: [{
-                  label: 'Moyenne',
-                  data: [moyTabStats[0],moyTabStats[1],moyTabStats[2],moyTabStats[3], moyTabStats[4]],
-                  borderWidth: 1
-                }]
-              },
-              options: {
-                scales: {
-                  y: {
-                    min: 0,
-                    max: 20
-                  }
-                }
-              }
-            });
-
+          
         }
         
     }
@@ -334,6 +317,31 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
 }
 }
 
+function chart(moyTabStats){
+    const ctx = document.createElement('canvas');
+    ctx.id = 'myChart'
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Français', 'Math', 'Histoire-Géo', 'Anglais', 'EPS'],
+        datasets: [{
+          label: 'Moyenne',
+          data: [moyTabStats[0],moyTabStats[1],moyTabStats[2],moyTabStats[3], moyTabStats[4]],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            min: 0,
+            max: 20
+          }
+        }
+      }
+    });
+    const container = document.querySelector('.modal-body div');
+    container.appendChild(ctx)
+}
  // Déconnexion
  document.querySelector('a#logout').onclick = () => {
     sessionStorage.removeItem('session')

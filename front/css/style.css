@@ -26,7 +26,7 @@ body{
 main{
     max-width: 1450px;
     min-height: 780px; /* à revoir */
-    margin: auto;
+    margin: 30px auto;
 }
 
 h1{
@@ -121,7 +121,7 @@ footer span{
 }
 
 .btn-group{
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
 }
@@ -179,11 +179,12 @@ footer span{
 table{
     width: 100%;
     border-radius: 40px;
-    border-spacing: 20px;
+    border-spacing: 15px;
     padding: 2%;
     font-size: 18px;
     font-weight: 400;
     background: var(--secondary);
+    border-collapse: unset !important;
 }
 
 .table-container{
@@ -340,6 +341,38 @@ table.edit input:focus, table.edit textarea:focus{
     justify-content: space-between;
 }
 
+#stats{
+    display: flex;
+    align-items: center;
+    border-radius: 50px !important;
+    padding: 10px 30px !important ;
+    font-weight: 500;
+    margin-left: 1%;
+}
+
+#stats .fa-solid{
+    font-size: 25px;
+}
+
+#stats span{
+    margin-left: 10px;
+}
+
+#myChart{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.modal-dialog{
+    height: 800px !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    width: 50% !important;
+    max-width: none !important;
+}
+
+
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*|||||||||||||||||||| LISTE D'ELEVES ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -450,6 +483,11 @@ table.edit input:focus, table.edit textarea:focus{
     .list-container{
         padding: 50px 3%;
     }
+
+    #stats span{
+        display: none;
+    }
+    
 }
 
 /**/
