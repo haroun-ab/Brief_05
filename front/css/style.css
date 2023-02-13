@@ -573,6 +573,10 @@ main.login {
   .login-btn:focus {
       outline: none;
   }
+
+  .tab-body p {
+    text-align: center;
+  }
   
   .tab-footer {
     position: absolute;
