@@ -326,8 +326,18 @@ table.edit input:focus, table.edit textarea:focus{
     background: #ECECEC;
 }
 
+.coef-matiere {
+    color: grey;
+    font-size: 14px;
+    font-weight: 500;
+}
 .flex-center{
     display: flex;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
 }
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/

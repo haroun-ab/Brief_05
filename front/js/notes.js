@@ -61,23 +61,23 @@ for (let i = 0; i<trimestreBtn.length; i++){
 
           
 
-const table = document.querySelector('table');
-const allInputs = document.querySelectorAll('input')
-const allTextArea = document.querySelectorAll('textarea')
-const h1 = document.querySelector('h1')
-const switchBtn = document.querySelector('.btn-group > button')
+    const table = document.querySelector('table');
+    const allInputs = document.querySelectorAll('input')
+    const allTextAreas = document.querySelectorAll('textarea')
+    const h1 = document.querySelector('h1')
+    const switchBtn = document.querySelector('.btn-group > button')
 
-switchMode(table, allInputs, allTextArea, h1, switchBtn)
-  }
+    switchMode(table, allInputs, allTextAreas, h1, switchBtn)
+}
 };
 
-function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
+function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
     if(table.classList.contains('show')){
         allInputs.forEach(element => {
             element.setAttribute('readonly', '')
         });
     
-        allTextArea.forEach(element => {
+        allTextAreas.forEach(element => {
             element.setAttribute('readonly', '')
         });
     };
@@ -103,7 +103,7 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
                 element.removeAttribute('readonly');
             });
     
-            allTextArea.forEach(element => {
+            allTextAreas.forEach(element => {
                 element.removeAttribute('readonly', '');
             });
     
@@ -111,6 +111,7 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
             trimestreBtn.forEach(element => {
                 element.setAttribute('disabled', 'disabled')
             });
+
     
         } else {
             // Changer de bouton
@@ -133,22 +134,76 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
                 element.setAttribute('readonly', '')
             });
         
-            allTextArea.forEach(element => {
+            allTextAreas.forEach(element => {
                 element.setAttribute('readonly', '')
             });
     
             // Réactiver les boutons de séléction des trimestres
             trimestreBtn.forEach(element => {
                 element.removeAttribute('disabled')
-            });    
+            });  
+            const trTab = document.querySelectorAll('tbody tr')
+            for(let i = 0; i < studentArray.length; i++){
+                if(studentArray[i].pseudo == paramsId){
 
+                    const trimesterObj = {}
+                    const notesArr = []
+
+            for(let j = 0; j<trTab.length; j++){
+                // Récupération des notes
+                const trNotesArray  = []
+                const notesDivTab = trTab[j].querySelectorAll('.note-coef')
+                for(let z = 0; z < notesDivTab.length; z++){
+                    const note = notesDivTab[z].children[0].value
+                    const coef = notesDivTab[z].children[1].value
+                    if(note.length > 0 && coef.length > 0){
+                        const singleNoteArr = [Number(note), Number(coef)] 
+                        trNotesArray.push(singleNoteArr)
+                    }
+                }   
+                //Récupération des appréciations 
+
+                notesArr.push(trNotesArray)
+              
+            }
+            const txtAreaArr = document.querySelectorAll('textarea')
             
+                const obj =  {notation : {
+                        francais : {notes : notesArr[0], coef: 2, appreciation :   txtAreaArr[0].value},
+                        math : {notes : notesArr[1], coef: 2, appreciation :   txtAreaArr[1].value},
+                        histGeo : {notes : notesArr[2], coef: 5, appreciation :  txtAreaArr[2].value},
+                        anglais : {notes : notesArr[3], coef: 1, appreciation :  txtAreaArr[3].value},
+                        eps : {notes : notesArr[4], coef: 3, appreciation : txtAreaArr[4].value}
+                        }, appreciationGenerale:   txtAreaArr[5].value 
+                        }
+                        console.log(notesArr[1])
+                trimesterObj[tableContainer.id] = obj
+                        
+                        const objectData = Object.assign(studentArray[i], trimesterObj)
+                        console.log(objectData)
+                    // Création et configuration d'un objet de requête AJAX
+                    const xhr = new XMLHttpRequest();
+                    xhr.open("POST", "http://127.0.0.1:8000/editNotes.php", true);
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                    xhr.setRequestHeader("Access-Control-Allow-Methods", "*");
+
+                    // Code à exécuter une fois le fichier JSON est chargé*
+                    xhr.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            // Récupération de la réponse contenant les données JSON
+                            const data = this.response;
+                            console.log(data);
+                        }
+                    }
+                    xhr.send(`data= ${JSON.stringify(objectData)}`);
+                }
+            } 
         }
     }
  }
 
   function fillReport(id) {
-    console.log(id)
 
     for(let i = 0; i < studentArray.length; i++){
         if(studentArray[i].pseudo == paramsId){
@@ -161,7 +216,7 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
            <tbody>
            <tr id="francais">
                  <td>
-                     <span class="bold">Français</span><br>
+                     <span class="flex-between"><span class="matiere bold ">Français</span><span class="coef-matiere">2</span></span>
                      <span class="little">Mme&nbsp;Perrin</span>
                  </td>
                  <td class="moy bold">11.2</td>
@@ -170,8 +225,8 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
              </tr>
              <tr id="math">
              <td>
-                 <span class="bold">Math</span><br>
-                 <span class="little">M.&nbsp;Darmanyan</span>
+             <span class="flex-between"><span class="matiere bold ">Math</span><span class="coef-matiere">2</span></span>
+             <span class="little">M.&nbsp;Darmanyan</span>
              </td>
              <td class="moy bold">11.2</td>
              <td class="notation flex-center"></td>             
@@ -179,7 +234,7 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
          </tr>
          <tr id="histGeo">
              <td>
-                 <span class="bold">Hist-geo</span><br>
+             <span class="flex-between"><span class="matiere bold ">Hist-Géo</span><span class="coef-matiere">5</span></span>
                  <span class="little">Mme&nbsp;Carl</span>
              </td>
              <td class="moy bold">11.2</td>
@@ -188,8 +243,8 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
          </tr>
          <tr id="anglais">
              <td>
-                 <span class="bold">Anglais</span><br>
-                 <span class="little">Mme&nbsp;Houadeg</span>
+             <span class="flex-between"><span class="matiere bold">Anglais</span><span class="coef-matiere">1</span></span>
+             <span class="little">Mme&nbsp;Houadeg</span>
              </td>
              <td class="moy bold">11.2</td>
              <td class="notation flex-center"></td>             
@@ -197,8 +252,8 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
          </tr>
          <tr id="eps">
              <td>
-                 <span class="bold">EPS</span><br>
-                 <span class="little">M.&nbsp;Martinelli</span>
+             <span class="flex-between"><span class="matiere bold">EPS</span><span class="coef-matiere">3</span></span>
+             <span class="little">M.&nbsp;Martinelli</span>
              </td>
              <td class="moy bold">11.2</td>
              <td class="notation flex-center"></td>             
@@ -210,8 +265,8 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
            </tfoot>
            </form>
            </table>`;
-     
            const trTab = document.querySelectorAll('tbody tr')
+
            let moyGen = 0
            let totalCoef = 0
            // Pour les stats 
@@ -220,25 +275,31 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
            for(let j = 0; j<trTab.length; j++){
             let moy = 0
             let coef = 0
-            
+   
               // appreciation   
                 document.querySelector(`#${trTab[j].id} .appreciation textarea`).innerHTML = studentArray[i][id].notation[trTab[j].id].appreciation
                 const notesTab = studentArray[i][id].notation[trTab[j].id].notes
-                for(let x = 0; x<notesTab.length; x++){
+                for(let x = 0; x < notesTab.length; x++){
                     document.querySelector(`#${trTab[j].id} .notation`).innerHTML += `<div class="note-coef"><input class="note" type="text" value="${notesTab[x][0]}"> <input class="coef" type="text" value="${notesTab[x][1]}"></div>`
                     // moyenne d'une matière
                     moy += notesTab[x][0] * notesTab[x][1] 
                     // total des coef
                     coef += notesTab[x][1]  
                 }
+                for(let w = 0; w < 6 - notesTab.length; w++){
+                    document.querySelector(`#${trTab[j].id} .notation`).innerHTML += `<div class="note-coef"><input class="note" type="text" value=""> <input class="coef" type="text" value=""></div>`
+                }
+               
                 const moyenneMatiere = (moy/coef).toFixed(2)
                 document.querySelector(`#${trTab[j].id} .moy.bold`).innerHTML = moyenneMatiere
-                totalCoef += coef
-                moyGen += moy
+                const matiereCoef = studentArray[i][id].notation[trTab[j].id].coef
+                totalCoef += matiereCoef
+                moyGen += moyenneMatiere * matiereCoef
                 moyTabStats.push(moyenneMatiere)
                 matiereTab.push(trTab[j].id)
            }
            document.querySelector(`.moygen`).innerHTML = (moyGen/totalCoef).toFixed(2)
+
            console.log(matiereTab); 
            console.log(moyTabStats); 
 
@@ -265,15 +326,13 @@ function switchMode(table, allInputs, allTextArea, h1, switchBtn) {
                 }
               }
             });
+
         }
         
     }
   }  
 }
 }
-
-
- 
 
  // Déconnexion
  document.querySelector('a#logout').onclick = () => {
