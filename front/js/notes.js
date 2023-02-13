@@ -1,3 +1,4 @@
+console.log('hello');
 if(!sessionStorage.getItem('session')){
     location.pathname = '/front/html/login.html'
 }
@@ -298,9 +299,34 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
                 matiereTab.push(trTab[j].id)
            }
            document.querySelector(`.moygen`).innerHTML = (moyGen/totalCoef).toFixed(2)
-            /*
-            FRANCOIS 
-            */
+
+           console.log(matiereTab); 
+           console.log(moyTabStats); 
+
+            /* Statistiques*/ 
+            
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['francais', 'math', 'histGeo', 'anglais', 'eps'],
+                datasets: [{
+                  label: 'Moyenne',
+                  data: [moyTabStats[0],moyTabStats[1],moyTabStats[2],moyTabStats[3], moyTabStats[4]],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    min: 0,
+                    max: 20
+                  }
+                }
+              }
+            });
+
         }
         
     }
