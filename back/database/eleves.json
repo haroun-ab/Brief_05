@@ -37,9 +37,9 @@
     "mdp" : "kbenzema",
     "t1" :  {"notation" : {
         "francais" : {"notes" : [[15, 3], [16, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
-        "math" : {"notes" : [[12, 1], [13, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "math" : {"notes" : [[17, 1], [18, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
         "histGeo" : {"notes" : [[15, 1], [14, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
-        "anglais" : {"notes" : [[13, 1], [15, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+        "anglais" : {"notes" : [[15, 1], [17, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
         "eps" : {"notes" : [[17, 1], [16, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
         }, "appreciationGenerale": "Excellent trimestre dans son ensemble"
         },
@@ -490,9 +490,9 @@
         "pseudo" : "jvallejo", 
         "mdp" : "jvallejo",
         "t1" :  {"notation" : {
-            "francais" : {"notes" : [[13, 3], [11.5, 1]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "francais" : {"notes" : [[4, 3], [5, 1]], "coef": 2, "appreciation" : "Dois fournir plus d'effort !"},
             "math" : {"notes" : [[13, 1], [13.5, 2]], "coef": 2, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
-            "histGeo" : {"notes" : [[14.5, 1], [16.5, 2]], "coef": 5, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
+            "histGeo" : {"notes" : [[2, 1], [3.5, 2]], "coef": 5, "appreciation" : "Travail très insuffisant !"},
             "anglais" : {"notes" : [[16.5, 1], [18, 2]], "coef": 1, "appreciation" : "Trés bon trimestre, continuez ainsi !"},
             "eps" : {"notes" : [[16.5, 1], [17.5, 2]], "coef": 3, "appreciation" : "Trés bon trimestre, continuez ainsi !"}
             }, "appreciationGenerale": "Très bon travail"
