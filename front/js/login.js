@@ -36,17 +36,28 @@ form.onsubmit = (e) => {
       if (data === "teacher successful log in") {
         location = "./liste.html";
         localStorage.setItem("session", "prof");
-      }
-
-      if (data === "student successful log in") {
+      } else if (data === "student successful log in") {
         location = `./notes.html?id=${dataObj.pseudo}`;
         localStorage.setItem("session", "eleves");
+      } else {
+        let erreur;
+        let pseudo = document.getElementById("id");
+        let password = document.getElementById("pw");
+        if(!password.value && !pseudo.value){
+          erreur = "Veuillez renseigner votre identifiant et votre mot de passe";
+        }else if (!password.value) {
+          erreur = "Veuillez renseigner votre mot de passe";
+        }else if (!pseudo.value) {
+          erreur = "Veuillez renseigner votre identifiant";
+        }else{
+          erreur = "Les identifiants saisis sont incorrects";
+        }
+       
+      
+        if (erreur) {
+          document.getElementById("erreur").innerHTML = erreur;
+        }
       }
-
-      console.log(localStorage.getItem("session"));
-
-      // Manipulation du DOM pour récupérer aux données XML
-      // et les afficher dans les cards
     }
   };
   xhr.send(`data= ${JSON.stringify(dataObj)}`);
