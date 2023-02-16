@@ -38,6 +38,8 @@ h1{
     font-weight: 700 !important;
 }
 
+
+
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||| HEADER |||| FOOTER |||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -98,7 +100,7 @@ footer{
 }
 
 footer .logo{
-    padding: 30px;
+    padding: 20px;
 }
 
 footer span{
@@ -118,20 +120,34 @@ footer span{
     width: 50px;
     height: 4px;
     background: var(--primary);
+    animation: drag-left-2 1000ms;
+}
+
+@keyframes drag-left-2{
+    0%{
+        transform: translate(500%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
 }
 
 .btn-group{
     display: flex !important;
     justify-content: space-between;
     align-items: center;
+    margin: 1%;
 }
 
 .btn-group nav{
     background: var(--secondary);
     width: fit-content;
     border-radius: 15px;
-    margin: 0 5px;
+    margin: 0;
     overflow: hidden;
+    animation: drag-right 800ms;
 }
 
 .btn-group nav button{
@@ -150,8 +166,6 @@ footer span{
 .btn-group nav button:first-child, .btn-group nav button:nth-child(2){
     border-right: 1px solid #8f8f8f;
 }
-
-
 
 .btn-group .edit-btn, .btn-group .save-btn{
     background: var(--primary);
@@ -194,6 +208,26 @@ table{
     overflow: scroll;
     margin: 35px 0;
 }
+
+tr{
+    animation: scale-up 800ms both;
+}
+
+button{
+    animation: scale-up 800ms both;
+}
+
+@keyframes scale-up{
+    0%{
+        opacity: 0;
+        transform: translateY(50%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
  
 td{
     border-radius: 15px;
@@ -344,11 +378,20 @@ table.edit input:focus, table.edit textarea:focus{
 #stats{
     display: flex;
     align-items: center;
-    border-radius: 50px !important;
+    border-radius: 20px !important;
     padding: 10px 30px !important ;
     font-weight: 500;
-    margin-left: 1%;
+    margin-left: 1%; 
+    transition: 300ms;
+    background-color: #048B9A;
+    color: white;
 }
+
+#stats:hover{
+    background: #059eaf !important;
+    transform: scale(1.02)
+}
+
 
 #stats .fa-solid{
     font-size: 25px;
@@ -368,8 +411,9 @@ table.edit input:focus, table.edit textarea:focus{
     position: absolute;
     top: 50%;
     transform: translateY(-50%) !important;
-    width: 50% !important;
+    width: 60% !important;
     max-width: none !important;
+    margin: auto !important;
 }
 
 
@@ -403,8 +447,34 @@ table.edit input:focus, table.edit textarea:focus{
     display: flex;
     justify-content: space-between;
     transition: 300ms;
+    animation: drag-left 800ms both;
 }
 
+.student:nth-child(odd){
+    animation: drag-right 800ms both;
+}
+
+@keyframes drag-left {
+    0% {
+                opacity: 0;
+              transform: translateX(100%) scale(0.5);
+    }
+    100% {
+                opacity: 1;
+              transform: translateX(0) scale(1);
+    }
+  }
+
+  @keyframes drag-right {
+    0% {
+            opacity: 0;
+              transform: translateX(-100%) scale(0.5);
+    }
+    100% {
+            opacity: 1;
+              transform: translateX(0) scale(1);
+    }
+  }
 .student:hover{
     transform: scale(1.03);
     font-weight: 500;
@@ -418,6 +488,32 @@ table.edit input:focus, table.edit textarea:focus{
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||| RESPONSIVE |||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+@media (max-width: 1024px) {
+    /*Table*/
+    table{
+        width: 1100px;
+    }
+    
+    /*Liste d'éléves*/
+    .student{
+        width: 40%;
+    }
+
+    .list-container{
+        padding: 50px 3%;
+    }
+
+    #stats span{
+        display: none;
+    }
+    
+    .modal-dialog{
+        width: 80% !important;
+        margin: auto !important;
+    }
+}
+
 @media(max-width:768px){
     /*Général*/
     header .logo .brand {
@@ -467,30 +563,13 @@ table.edit input:focus, table.edit textarea:focus{
         padding: 20px 10px !important;
         font-size: 20px !important;
     }
+
+    .modal-dialog{
+        width: 98% !important;
+    }
 }
 
-@media (max-width: 1024px) {
-    /*Table*/
-    table{
-        width: 1100px;
-    }
-    
-    /*Liste d'éléves*/
-    .student{
-        width: 40%;
-    }
-
-    .list-container{
-        padding: 50px 3%;
-    }
-
-    #stats span{
-        display: none;
-    }
-    
-}
-
-/**/
+/* Connexion */
 main.login {
     height: 70vh; 
 }
@@ -535,8 +614,20 @@ main.login {
     box-shadow: 0px 0px 10px #b5b5b5;
     border-radius: 30px;
     font-size: 1rem;
+    animation: scale-up-center 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
   }
-
+  @keyframes scale-up-center {
+    0% {
+            opacity: 0;
+              transform: translateY(100%) scale(0.5);
+    }
+    100% {
+            opacity: 1;
+              transform: translateY(0) scale(1);
+    }
+  }
+  
   .tab-body.active {
     display: block;
   }
@@ -644,10 +735,22 @@ main.login {
   .tab-link.active {
     font-weight: bold;
   }
-  #stats{
-    background-color: #048B9A;
+
+  header .btn{
+    background: var(--primary);
     color: white;
-    padding: 15px;
+    font-weight: 600;
+  }
+
+  header .btn:hover{
+    background: #059eaf;
+    color: white;
+  }
+
+  header .modal-dialog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @media (max-width: 1024px) {
     .login-container{

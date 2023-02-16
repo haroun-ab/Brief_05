@@ -48,7 +48,7 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Stat</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Statistiques</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -76,12 +76,10 @@
 
 <script src="../js/notes.js"></script>
 <script type="text/javascript">
-
         // adapter la taille des text area
         window.onload = function() {
             updateTextareaHeight(document.querySelector('table textarea'));
-        }
-        
+        }        
         function updateTextareaHeight(input) {
             input.style.cssText = 'height :auto; min-height: auto; max-height:auto';
             input.style.cssText = `height :${input.scrollHeight}px; min-height: ${input.scrollHeight}px; max-height:${input.scrollHeight}px`;
@@ -90,7 +88,7 @@
         function MaxLengthTextarea(objettextarea,maxlength){
           if (objettextarea.value.length > maxlength) {
             objettextarea.value = objettextarea.value.substring(0, maxlength);
-            alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
+            alert('Votre texte ne doit pas dépasser '+ maxlength +' caractères!');
            }
         }
 

@@ -1,4 +1,4 @@
-if(!sessionStorage.getItem('session')){
+if(!localStorage.getItem('session')){
   location.pathname = '/front/html/login.html'
 }
 
@@ -61,14 +61,11 @@ function trimestreAvg(trimestre){
   }
   moyenneTrimestre/=13
 
-
-
-  
   // Je retourne la moyenne
   return moyenneTrimestre
 }
 
 // Déconnexion
 document.querySelector('a#logout').onclick = () => {
-  sessionStorage.removeItem('session')
+  localStorage.removeItem('session')
 }

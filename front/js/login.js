@@ -1,13 +1,13 @@
 if (
-  sessionStorage.getItem("session") &&
-  sessionStorage.getItem("session") == "prof"
+  localStorage.getItem("session") &&
+  localStorage.getItem("session") == "prof"
 ) {
   location.pathname = "/front/html/liste.html";
 }
 
 if (
-  sessionStorage.getItem("session") &&
-  sessionStorage.getItem("session") == "eleves"
+  localStorage.getItem("session") &&
+  localStorage.getItem("session") == "eleves"
 ) {
   location.pathname = "/front/html/notes.html";
 }
@@ -35,15 +35,15 @@ form.onsubmit = (e) => {
 
       if (data === "teacher successful log in") {
         location = "./liste.html";
-        sessionStorage.setItem("session", "prof");
+        localStorage.setItem("session", "prof");
       }
 
       if (data === "student successful log in") {
         location = `./notes.html?id=${dataObj.pseudo}`;
-        sessionStorage.setItem("session", "eleves");
+        localStorage.setItem("session", "eleves");
       }
 
-      console.log(sessionStorage.getItem("session"));
+      console.log(localStorage.getItem("session"));
 
       // Manipulation du DOM pour récupérer aux données XML
       // et les afficher dans les cards

@@ -1,8 +1,8 @@
-if(!sessionStorage.getItem('session')){
+if(!localStorage.getItem('session')){
     location.pathname = '/front/html/login.html'
 }
   
-if (sessionStorage.getItem('session') && sessionStorage.getItem('session')== 'eleves'){
+if (localStorage.getItem('session') && localStorage.getItem('session')== 'eleves'){
     document.querySelector('a#home').remove()
     document.querySelector('.edit-btn').style.cssText = "display: none"
 }
@@ -32,7 +32,7 @@ const tableContainer = document.querySelector('main .table-container')
 
 tableContainer.id = `t${1}`
 fillReport(tableContainer.id)
-  trimestreBtn[0].style.cssText = "color: var(--primary); font-weight: 600";
+  trimestreBtn[0].style.cssText = "color: var(--primary) !important; font-weight: 600";
 
   
 
@@ -53,7 +53,7 @@ for (let i = 0; i<trimestreBtn.length; i++){
       btn.style.cssText = "color: black; font-weight: 400";
     });
     tableContainer.id = `t${i+1}`
-    trimestreBtn[i].style.cssText = "color: var(--primary); font-weight: 600";
+    trimestreBtn[i].style.cssText = "color: var(--primary) !important; font-weight: 600";
     fillReport(tableContainer.id)
     const ctx = document.querySelector('#myChart');
     ctx.remove()
@@ -110,6 +110,7 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
             // Désactiver les boutons de séléction des trimestres
             trimestreBtn.forEach(element => {
                 element.setAttribute('disabled', 'disabled')
+                element.style.color = "grey"
             });
 
     
@@ -142,8 +143,6 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
             trimestreBtn.forEach(element => {
                 element.removeAttribute('disabled')
             });  
-
-         
 
 
             const trTab = document.querySelectorAll('tbody tr')
@@ -208,9 +207,17 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
  }
 
   function fillReport(id) {
-
+       // Pour les stats 
+       const moyTabStats = []
+       const matiereTab = []
+       const ClasseMoyArr = []
+       const minMoyArr = []
+       const maxMoyArr = []
+       let nom
     for(let i = 0; i < studentArray.length; i++){
+        
         if(studentArray[i].pseudo == paramsId){
+            nom = studentArray[i].nomPrenom
             document.querySelector('.nom-eleve').innerHTML = studentArray[i].nomPrenom
             
             const tableContainer = document.querySelector('main .table-container')
@@ -269,13 +276,13 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
            </tfoot>
            </form>
            </table>`;
-           const trTab = document.querySelectorAll('tbody tr')
 
            let moyGen = 0
            let totalCoef = 0
-           // Pour les stats 
-           const moyTabStats = []
-           const matiereTab = []
+      
+           const trTab = document.querySelectorAll('tbody tr')
+
+           
            for(let j = 0; j<trTab.length; j++){
             let moy = 0
             let coef = 0
@@ -304,31 +311,101 @@ function switchMode(table, allInputs, allTextAreas, h1, switchBtn) {
            }
            document.querySelector(`.moygen`).innerHTML = (moyGen/totalCoef).toFixed(2)
 
-           console.log(matiereTab); 
-           console.log(moyTabStats); 
-           chart(moyTabStats)
+     
            
             /* Statistiques*/ 
           
         }
         
-    }
+     
   }  
+ 
+
+
+  const trTab = document.querySelectorAll('tbody tr')
+  for (let i = 0; i < trTab.length; i++) {
+    let moyMatiereClasse = 0;
+    let minMoyClasse = 20;
+    let maxMoyClasse = 0;
+      console.log(trTab[i].id)
+      for (let x = 0; x < studentArray.length; x++) {
+        const notesTab = studentArray[x][id].notation[trTab[i].id].notes
+        let moy = 0
+                
+    let coefSum = 0
+        for(let j = 0; j < notesTab.length; j++){
+            const note = notesTab[j][0];
+            const coef = notesTab[j][1];
+            coefSum += coef;
+            moy += note * coef;
+            
+        }
+        const eleveMoy = (moy/coefSum)
+        moyMatiereClasse += eleveMoy
+        console.log(eleveMoy)
+        if (eleveMoy < minMoyClasse){
+            minMoyClasse = eleveMoy;
+          }
+        if (eleveMoy > maxMoyClasse){
+            maxMoyClasse = eleveMoy;
+        }
+          console.log(minMoyClasse)
+      }
+      const ClasseMoy = moyMatiereClasse/studentArray.length
+        minMoyArr.push(minMoyClasse);
+        maxMoyArr.push(maxMoyClasse);
+        ClasseMoyArr.push(ClasseMoy);
+        console.log(maxMoyArr)
+        console.log(minMoyArr)
+      
+  }
+  console.log(ClasseMoyArr)
+//   moyClasseFr = studentArray[i][id].notation.francais.notes[0]
+//   console.log(moyClasseFr);
+
+    //     console.log(matiereTab); 
+    //  console.log(moyTabStats); 
+     chart(moyTabStats, ClasseMoyArr, nom, minMoyArr, maxMoyArr)
+}
 }
 }
 
-function chart(moyTabStats){
+function chart(moyTabStats, ClasseMoyArr, nom, minMoyArr, maxMoyArr){
     const ctx = document.createElement('canvas');
     ctx.id = 'myChart'
     new Chart(ctx, {
       type: 'line',
       data: {
         labels: ['Français', 'Math', 'Histoire-Géo', 'Anglais', 'EPS'],
-        datasets: [{
-          label: 'Moyenne',
-          data: [moyTabStats[0],moyTabStats[1],moyTabStats[2],moyTabStats[3], moyTabStats[4]],
-          borderWidth: 1
-        }]
+        datasets: [
+        {
+            label: 'Classe',
+            data: ClasseMoyArr,
+            borderWidth: 3,
+            backgroundColor: 'white',
+            borderColor: '#dbb71d'
+          },
+          {
+            label: 'Min',
+            data: minMoyArr,
+            borderWidth: 3,
+            backgroundColor: 'white',
+            borderColor: 'rgb(180, 0, 0)'
+          },
+          {
+            label: 'Max',
+            data: maxMoyArr,
+            borderWidth: 3,
+            backgroundColor: 'white',
+            borderColor: 'rgb(0, 255, 0)'
+          },
+          {
+            label: nom,
+            data: moyTabStats,
+            borderWidth: 7,
+            backgroundColor: '#048B9A',
+            borderColor: '#048B9A'
+          }]
       },
       options: {
         scales: {
@@ -344,5 +421,5 @@ function chart(moyTabStats){
 }
  // Déconnexion
  document.querySelector('a#logout').onclick = () => {
-    sessionStorage.removeItem('session')
+    localStorage.removeItem('session')
   }
